@@ -1,0 +1,668 @@
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.4.62-android-x86_64 (cwhuang@android-x86) (gcc version 4.6 20120106 (prerelease) (GCC) ) #1 SMP PREEMPT Mon Apr 24 01:34:57 CST 2017
+[    0.000000] Command line: initrd=/initrd.img root=/dev/ram0 quiet SRC= DATA= BOOT_IMAGE=/kernel 
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x01: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x02: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x04: 'AVX registers'
+[    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+[    0.000000] x86/fpu: Using 'lazy' FPU context switches.
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000dffeffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x00000001603fffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.5 present.
+[    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000000] e820: last_pfn = 0x160400 max_arch_pfn = 0x400000000
+[    0.000000] MTRR default type: uncachable
+[    0.000000] MTRR variable ranges disabled:
+[    0.000000] MTRR: Disabled
+[    0.000000] x86/PAT: MTRRs disabled, skipping PAT initialization too.
+[    0.000000] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+[    0.000000] CPU MTRRs all blank - virtualized system.
+[    0.000000] e820: last_pfn = 0xdfff0 max_arch_pfn = 0x400000000
+[    0.000000] found SMP MP-table at [mem 0x0009fff0-0x0009ffff] mapped at [ffff88000009fff0]
+[    0.000000] Base memory trampoline at [ffff880000098000] 98000 size 28672
+[    0.000000] BRK [0x29ce8000, 0x29ce8fff] PGTABLE
+[    0.000000] BRK [0x29ce9000, 0x29ce9fff] PGTABLE
+[    0.000000] BRK [0x29cea000, 0x29ceafff] PGTABLE
+[    0.000000] BRK [0x29ceb000, 0x29cebfff] PGTABLE
+[    0.000000] BRK [0x29cec000, 0x29cecfff] PGTABLE
+[    0.000000] RAMDISK: [mem 0x7feb3000-0x7fffefff]
+[    0.000000] ACPI: Early table checksum verification disabled
+[    0.000000] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+[    0.000000] ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+[    0.000000] ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+[    0.000000] ACPI: DSDT 0x00000000DFFF0480 0021FF (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+[    0.000000] ACPI: FACS 0x00000000DFFF0200 000040
+[    0.000000] ACPI: FACS 0x00000000DFFF0200 000040
+[    0.000000] ACPI: APIC 0x00000000DFFF0240 00006C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+[    0.000000] ACPI: SSDT 0x00000000DFFF02B0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.000000]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.000000]   Normal   [mem 0x0000000100000000-0x00000001603fffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.000000]   node   0: [mem 0x0000000000100000-0x00000000dffeffff]
+[    0.000000]   node   0: [mem 0x0000000100000000-0x00000001603fffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x00000001603fffff]
+[    0.000000] On node 0 totalpages: 1311630
+[    0.000000]   DMA zone: 56 pages used for memmap
+[    0.000000]   DMA zone: 22 pages reserved
+[    0.000000]   DMA zone: 3998 pages, LIFO batch:0
+[    0.000000]   DMA32 zone: 12488 pages used for memmap
+[    0.000000]   DMA32 zone: 913392 pages, LIFO batch:31
+[    0.000000]   Normal zone: 5390 pages used for memmap
+[    0.000000]   Normal zone: 394240 pages, LIFO batch:31
+[    0.000000] ACPI: PM-Timer IO Port: 0x4008
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] IOAPIC[0]: apic_id 4, version 32, address 0xfec00000, GSI 0-23
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[    0.000000] ACPI: IRQ0 used by override.
+[    0.000000] ACPI: IRQ9 used by override.
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+[    0.000000] e820: [mem 0xe0000000-0xfebfffff] available for PCI devices
+[    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.000000] setup_percpu: NR_CPUS:8 nr_cpumask_bits:8 nr_cpu_ids:4 nr_node_ids:1
+[    0.000000] PERCPU: Embedded 32 pages/cpu @ffff880160000000 s91416 r8192 d31464 u524288
+[    0.000000] pcpu-alloc: s91416 r8192 d31464 u524288 alloc=1*2097152
+[    0.000000] pcpu-alloc: [0] 0 1 2 3 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 1293674
+[    0.000000] Kernel command line: initrd=/initrd.img root=/dev/ram0 quiet SRC= DATA= BOOT_IMAGE=/kernel 
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)
+[    0.000000] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.000000] Memory: 5075072K/5246520K available (6326K kernel code, 916K rwdata, 3488K rodata, 1196K init, 828K bss, 171448K reserved, 0K cma-reserved)
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	Build-time adjustment of leaf fanout to 64.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=4
+[    0.000000] NR_IRQS:4352 nr_irqs:456 16
+[    0.000000] Console: colour VGA+ 80x25
+[    0.000000] console [tty0] enabled
+[    0.000000] tsc: Fast TSC calibration using PIT
+[    0.000000] tsc: Detected 2494.044 MHz processor
+[    0.000006] Calibrating delay loop (skipped), value calculated using timer frequency.. 4988.08 BogoMIPS (lpj=2494044)
+[    0.000009] pid_max: default: 32768 minimum: 301
+[    0.000024] ACPI: Core revision 20150930
+[    0.000995] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.001036] Security Framework initialized
+[    0.001058] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.001069] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.001406] Initializing cgroup subsys freezer
+[    0.001410] Initializing cgroup subsys debug
+[    0.001463] CPU: Physical Processor ID: 0
+[    0.001465] CPU: Processor Core ID: 0
+[    0.002405] mce: CPU supports 0 MCE banks
+[    0.002428] Last level iTLB entries: 4KB 1024, 2MB 1024, 4MB 1024
+[    0.002429] Last level dTLB entries: 4KB 1024, 2MB 1024, 4MB 1024, 1GB 4
+[    0.002686] Freeing SMP alternatives memory: 24K (ffffffffa9c12000 - ffffffffa9c18000)
+[    0.002718] ftrace: allocating 28531 entries in 112 pages
+[    0.029868] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.141828] smpboot: CPU0: Intel(R) Core(TM) i7-4710MQ CPU @ 2.50GHz (family: 0x6, model: 0x3c, stepping: 0x3)
+[    0.141869] Performance Events: unsupported p6 CPU model 60 no PMU driver, software events only.
+[    0.151077] NMI watchdog: disabled (cpu0): hardware events not enabled
+[    0.151144] NMI watchdog: Shutting down hard lockup detector on all cpus
+[    0.153876] x86: Booting SMP configuration:
+[    0.153880] .... node  #0, CPUs:      #1
+[    0.155062] mce: CPU supports 0 MCE banks
+[    0.160103]  #2<6>[    0.161285] mce: CPU supports 0 MCE banks
+[    0.167276]  #3
+[    0.167278] mce: CPU supports 0 MCE banks
+[    0.169357] x86: Booted up 1 node, 4 CPUs
+[    0.169362] smpboot: Total of 4 processors activated (19952.35 BogoMIPS)
+[    0.169506] CPU3: update max cpu_capacity 1024
+[    0.170032] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.170038] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.170435] pinctrl core: initialized pinctrl subsystem
+[    0.170675] RTC time: 15:04:59, date: 11/07/17
+[    0.170924] NET: Registered protocol family 16
+[    0.172845] CPU0: update max cpu_capacity 1024
+[    0.177845] cpuidle: using governor ladder
+[    0.180839] cpuidle: using governor menu
+[    0.180943] ACPI: bus type PCI registered
+[    0.180946] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.184961] PCI: Using configuration type 1 for base access
+[    0.207654] ACPI: Added _OSI(Module Device)
+[    0.207658] ACPI: Added _OSI(Processor Device)
+[    0.207660] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.207662] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.208175] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.209443] ACPI: Interpreter enabled
+[    0.209452] ACPI: (supports S0 S5)
+[    0.209454] ACPI: Using IOAPIC for interrupt routing
+[    0.209556] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.212694] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.212701] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+[    0.212713] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    0.212717] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.212956] PCI host bridge to bus 0000:00
+[    0.212959] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.212962] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.212964] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.212966] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
+[    0.212969] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.213000] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+[    0.213474] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+[    0.213962] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+[    0.214267] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+[    0.214424] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.214426] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.214428] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.214430] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.214591] pci 0000:00:02.0: [80ee:beef] type 00 class 0x030000
+[    0.219006] pci 0000:00:02.0: reg 0x10: [mem 0xe0000000-0xe07fffff pref]
+[    0.253429] pci 0000:00:03.0: [1022:2000] type 00 class 0x020000
+[    0.259565] pci 0000:00:03.0: reg 0x10: [io  0xd020-0xd03f]
+[    0.264935] pci 0000:00:03.0: reg 0x14: [mem 0xf0000000-0xf0000fff]
+[    0.288871] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+[    0.293958] pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
+[    0.298498] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+[    0.302440] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+[    0.320524] pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
+[    0.320628] pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
+[    0.320680] pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
+[    0.321207] pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+[    0.326011] pci 0000:00:06.0: reg 0x10: [mem 0xf0804000-0xf0804fff]
+[    0.358744] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+[    0.359141] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[    0.359162] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    0.359455] pci_bus 0000:00: on NUMA node 0
+[    0.360141] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[    0.360314] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[    0.360414] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[    0.360477] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[    0.360599] ACPI: Enabled 2 GPEs in block 00 to 07
+[    0.360777] vgaarb: setting as boot device: PCI:0000:00:02.0
+[    0.360781] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+[    0.360785] vgaarb: loaded
+[    0.360788] vgaarb: bridge control possible 0000:00:02.0
+[    0.360953] SCSI subsystem initialized
+[    0.362867] libata version 3.00 loaded.
+[    0.362888] ACPI: bus type USB registered
+[    0.362917] usbcore: registered new interface driver usbfs
+[    0.362927] usbcore: registered new interface driver hub
+[    0.363019] usbcore: registered new device driver usb
+[    0.363042] media: Linux media interface: v0.10
+[    0.363050] Linux video capture interface: v2.00
+[    0.363205] PCI: Using ACPI for IRQ routing
+[    0.363208] PCI: pci_cache_line_size set to 64 bytes
+[    0.363398] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+[    0.363404] e820: reserve RAM buffer [mem 0xdfff0000-0xdfffffff]
+[    0.363406] e820: reserve RAM buffer [mem 0x160400000-0x163ffffff]
+[    0.363689] amd_nb: Cannot enumerate AMD northbridges
+[    0.363895] clocksource: Switched to clocksource refined-jiffies
+[    0.373423] pnp: PnP ACPI init
+[    0.373490] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+[    0.373553] pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+[    0.373874] pnp: PnP ACPI: found 2 devices
+[    0.379175] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.379240] clocksource: Switched to clocksource acpi_pm
+[    0.379342] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.379346] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.379349] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.379351] pci_bus 0000:00: resource 7 [mem 0xe0000000-0xfdffffff window]
+[    0.379534] NET: Registered protocol family 2
+[    0.379702] TCP established hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.382941] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+[    0.383105] TCP: Hash tables configured (established 65536 bind 65536)
+[    0.383130] UDP hash table entries: 4096 (order: 5, 131072 bytes)
+[    0.383155] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes)
+[    0.383377] NET: Registered protocol family 1
+[    0.383392] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.383416] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    0.383439] pci 0000:00:02.0: Video device with shadowed ROM
+[    0.384168] PCI: CLS 0 bytes, default 64
+[    0.384220] Trying to unpack rootfs image as initramfs...
+[    0.400395] Freeing initrd memory: 1328K (ffff88007feb3000 - ffff88007ffff000)
+[    0.400405] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    0.400408] software IO TLB [mem 0xdbff0000-0xdfff0000] (64MB) mapped at [ffff8800dbff0000-ffff8800dffeffff]
+[    0.400533] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    0.400550] RAPL PMU detected, API unit is 2^-32 Joules, 4 fixed counters 10737418240 ms ovfl timer
+[    0.400557] hw unit of domain pp0-core 2^-0 Joules
+[    0.400558] hw unit of domain package 2^-0 Joules
+[    0.400560] hw unit of domain dram 2^-0 Joules
+[    0.400562] hw unit of domain pp1-gpu 2^-0 Joules
+[    0.408107] audit: initializing netlink subsys (disabled)
+[    0.408128] audit: type=2000 audit(1510067099.232:1): initialized
+[    0.408911] VFS: Disk quotas dquot_6.6.0
+[    0.408955] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.410752] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.410935] fuse init (API version 7.23)
+[    0.415680] io scheduler noop registered
+[    0.415685] io scheduler deadline registered
+[    0.415744] io scheduler cfq registered (default)
+[    0.415865] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    0.415890] intel_idle: does not run on family 6 model 60
+[    0.415976] power_supply AC: uevent
+[    0.415979] power_supply AC: POWER_SUPPLY_NAME=AC
+[    0.415990] ACPI: AC Adapter [AC] (off-line)
+[    0.416083] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    0.416087] ACPI: Power Button [PWRF]
+[    0.416155] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    0.416242] ACPI: Sleep Button [SLPF]
+[    0.416350] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    0.416406] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input2
+[    0.418666] power_supply BAT0: uevent
+[    0.418669] power_supply BAT0: POWER_SUPPLY_NAME=BAT0
+[    0.418757] ACPI: Battery Slot [BAT0] (battery present)
+[    0.419215] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.419552] Linux agpgart interface v0.103
+[    0.419711] Unable to detect cache hierarchy from DT for CPU 0
+[    0.425300] power_supply AC: power_supply_changed
+[    0.425306] power_supply AC: power_supply_changed_work
+[    0.425340] power_supply AC: power_supply_update_gen_leds 0
+[    0.425351] power_supply AC: uevent
+[    0.425353] power_supply AC: POWER_SUPPLY_NAME=AC
+[    0.425379] power_supply AC: prop ONLINE=0
+[    0.428448] power_supply BAT0: power_supply_changed
+[    0.428452] power_supply BAT0: power_supply_changed_work
+[    0.428455] power_supply BAT0: power_supply_update_bat_leds 2
+[    0.428461] power_supply BAT0: uevent
+[    0.428463] power_supply BAT0: POWER_SUPPLY_NAME=BAT0
+[    0.428467] power_supply BAT0: prop STATUS=Discharging
+[    0.428470] power_supply BAT0: prop PRESENT=1
+[    0.428473] power_supply BAT0: prop TECHNOLOGY=Unknown
+[    0.428475] power_supply BAT0: prop CYCLE_COUNT=0
+[    0.428478] power_supply BAT0: prop VOLTAGE_MIN_DESIGN=10000000
+[    0.428480] power_supply BAT0: prop VOLTAGE_NOW=10000000
+[    0.428483] power_supply BAT0: prop ENERGY_FULL_DESIGN=50000000
+[    0.428485] power_supply BAT0: prop ENERGY_FULL=50000000
+[    0.428488] power_supply BAT0: prop ENERGY_NOW=47500000
+[    0.428490] power_supply BAT0: prop CAPACITY=95
+[    0.428493] power_supply BAT0: prop CAPACITY_LEVEL=Normal
+[    0.428495] power_supply BAT0: prop MODEL_NAME=1
+[    0.428497] power_supply BAT0: prop MANUFACTURER=innotek
+[    0.428500] power_supply BAT0: prop SERIAL_NUMBER=0
+[    0.442093] brd: module loaded
+[    0.455348] loop: module loaded
+[    0.457454] VMware PVSCSI driver - version 1.0.5.0-k
+[    0.457471] hv_vmbus: registering driver hv_storvsc
+[    0.457540] ata_piix 0000:00:01.1: version 2.13
+[    0.459104] scsi host0: ata_piix
+[    0.461157] scsi host1: ata_piix
+[    0.461347] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[    0.461350] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[    0.461489] tun: Universal TUN/TAP device driver, 1.6
+[    0.461492] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    0.461509] Fusion MPT base driver 3.04.20
+[    0.461511] Copyright (c) 1999-2008 LSI Corporation
+[    0.461517] Fusion MPT SPI Host driver 3.04.20
+[    0.461596] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.461602] ehci-pci: EHCI PCI platform driver
+[    0.461655] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.461661] ohci-pci: OHCI PCI platform driver
+[    0.462063] ohci-pci 0000:00:06.0: OHCI PCI host controller
+[    0.462088] ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 1
+[    0.462160] ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
+[    0.613398] ata2.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+[    0.613751] ata2.00: configured for UDMA/33
+[    0.613906] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001
+[    0.613911] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.613915] usb usb1: Product: OHCI PCI host controller
+[    0.613918] usb usb1: Manufacturer: Linux 4.4.62-android-x86_64 ohci_hcd
+[    0.613921] usb usb1: SerialNumber: 0000:00:06.0
+[    0.614057] hub 1-0:1.0: USB hub found
+[    0.614085] hub 1-0:1.0: 12 ports detected
+[    0.614669] ata1.01: NODEV after polling detection
+[    0.614801] uhci_hcd: USB Universal Host Controller Interface driver
+[    0.614836] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+[    0.614839] ata1.00: 20971520 sectors, multi 128: LBA 
+[    0.614924] usbcore: registered new interface driver usb-storage
+[    0.614952] usbcore: registered new interface driver ums-alauda
+[    0.614979] usbcore: registered new interface driver ums-cypress
+[    0.615004] usbcore: registered new interface driver ums-datafab
+[    0.615030] usbcore: registered new interface driver ums_eneub6250
+[    0.615043] usbcore: registered new interface driver ums-freecom
+[    0.615055] usbcore: registered new interface driver ums-isd200
+[    0.615079] usbcore: registered new interface driver ums-jumpshot
+[    0.615104] usbcore: registered new interface driver ums-onetouch
+[    0.615131] usbcore: registered new interface driver ums-realtek
+[    0.615143] usbcore: registered new interface driver ums-sddr09
+[    0.615154] ata1.00: configured for UDMA/33
+[    0.615173] usbcore: registered new interface driver ums-sddr55
+[    0.615210] usbcore: registered new interface driver ums-usbat
+[    0.615248] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    0.615518] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+[    0.615693] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    0.615918] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.615940] sd 0:0:0:0: [sda] 20971520 512-byte logical blocks: (10.7 GB/10.0 GiB)
+[    0.615973] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    0.619435] sd 0:0:0:0: [sda] Write Protect is off
+[    0.619441] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    0.619489] hv_vmbus: registering driver hyperv_keyboard
+[    0.619541] mousedev: PS/2 mouse device common for all mice
+[    0.619563] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    0.619797] scsi 1:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+[    0.619877] rtc rtc0: alarm rollover: day
+[    0.619941] rtc rtc0: rtc_cmos: dev (254:0)
+[    0.619947] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+[    0.620014] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    0.620039] IR Sharp protocol handler initialized
+[    0.620043] IR XMP protocol handler initialized
+[    0.620101] device-mapper: uevent: version 1.0.3
+[    0.620249] device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-devel@redhat.com
+[    0.620596] sr 1:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+[    0.620599] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    0.620710] sr 1:0:0:0: Attached scsi CD-ROM sr0
+[    0.620757] sr 1:0:0:0: Attached scsi generic sg1 type 5
+[    0.620798] sd 0:0:0:0: [sda] Attached SCSI disk
+[    0.621616] sdhci: Secure Digital Host Controller Interface driver
+[    0.621619] sdhci: Copyright(c) Pierre Ossman
+[    0.621670] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.621761] hidraw: raw HID events driver (C) Jiri Kosina
+[    0.621813] usbcore: registered new interface driver usbhid
+[    0.621817] usbhid: USB HID core driver
+[    0.621882] ashmem: initialized
+[    0.622442] oprofile: using timer interrupt.
+[    0.622498] GACT probability NOT on
+[    0.622504] Mirror/redirect action on
+[    0.622510] u32 classifier
+[    0.622512]     Actions configured
+[    0.622516] Netfilter messages via NETLINK v0.30.
+[    0.622527] nf_conntrack version 0.5.0 (65536 buckets, 262144 max)
+[    0.626261] ctnetlink v0.93: registering with nfnetlink.
+[    0.626484] xt_time: kernel timezone is -0000
+[    0.626574] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    0.626618] arp_tables: (C) 2002 David S. Miller
+[    0.626631] Initializing XFRM netlink socket
+[    0.626831] NET: Registered protocol family 10
+[    0.629372] mip6: Mobile IPv6
+[    0.629383] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    0.629391] sit: IPv6 over IPv4 tunneling driver
+[    0.630143] NET: Registered protocol family 17
+[    0.630153] NET: Registered protocol family 15
+[    0.630171] NET: Registered protocol family 35
+[    0.630761] microcode: CPU0 sig=0x306c3, pf=0x40, revision=0x0
+[    0.630793] microcode: CPU1 sig=0x306c3, pf=0x40, revision=0x0
+[    0.630801] microcode: CPU2 sig=0x306c3, pf=0x40, revision=0x0
+[    0.630828] microcode: CPU3 sig=0x306c3, pf=0x40, revision=0x0
+[    0.630854] microcode: Microcode Update Driver: v2.01 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+[    0.630938] registered taskstats version 1
+[    0.632443]   Magic number: 9:659:82
+[    0.632736] rtc_cmos rtc_cmos: setting system clock to 2017-11-07 15:05:00 UTC (1510067100)
+[    0.633729] Freeing unused kernel memory: 1196K (ffffffffa9ae7000 - ffffffffa9c12000)
+[    0.633732] Write protecting the kernel read-only data: 12288k
+[    0.634372] Freeing unused kernel memory: 1856K (ffff880029430000 - ffff880029600000)
+[    0.635715] Freeing unused kernel memory: 608K (ffff880029968000 - ffff880029a00000)
+[    0.653487] random: env: uninitialized urandom read (4 bytes read, 11 bits of entropy available)
+[    0.653900] random: setsid: uninitialized urandom read (4 bytes read, 11 bits of entropy available)
+[    0.654254] random: cttyhack: uninitialized urandom read (4 bytes read, 11 bits of entropy available)
+[    0.654612] random: sh: uninitialized urandom read (4 bytes read, 11 bits of entropy available)
+[    0.655445] random: dirname: uninitialized urandom read (4 bytes read, 11 bits of entropy available)
+[    0.656010] random: cat: uninitialized urandom read (4 bytes read, 11 bits of entropy available)
+[    0.656576] random: mount: uninitialized urandom read (4 bytes read, 11 bits of entropy available)
+[    0.657200] random: dirname: uninitialized urandom read (4 bytes read, 11 bits of entropy available)
+[    0.657806] random: basename: uninitialized urandom read (4 bytes read, 11 bits of entropy available)
+[    0.658414] random: ln: uninitialized urandom read (4 bytes read, 11 bits of entropy available)
+[    0.672744] VFS: could not find a valid V7 on sda.
+[    0.711321] ISO 9660 Extensions: Microsoft Joliet Level 3
+[    0.722967] ISO 9660 Extensions: RRIP_1991A
+[    1.392966] hrtimer: interrupt took 4303340 ns
+[    1.405484] tsc: Refined TSC clocksource calibration: 2494.237 MHz
+[    1.405491] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x23f3f5a1460, max_idle_ns: 440795218046 ns
+[    2.094769] EXT4-fs (loop1): couldn't mount as ext3 due to feature incompatibilities
+[    2.137076] EXT4-fs (loop1): mounted filesystem with ordered data mode. Opts: (null)
+[    2.196198] init: init started!
+[    2.196564] init: init second stage started!
+[    2.196598] init: waitpid failed: No child processes
+[    2.196598] init: (Loading properties from /default.prop took 0.00s.)
+[    2.196598] init: (Parsing /init.environ.rc took 0.00s.)
+[    2.196598] init: (Parsing /init.usb.rc took 0.00s.)
+[    2.197297] init: (Parsing /init.bluetooth.rc took 0.00s.)
+[    2.197324] init: (Parsing /init.superuser.rc took 0.00s.)
+[    2.197329] init: (Parsing /init.android_x86_64.rc took 0.00s.)
+[    2.197423] init: (Parsing /init.usb.configfs.rc took 0.00s.)
+[    2.197460] init: (Parsing /init.zygote64_32.rc took 0.00s.)
+[    2.197481] init: (Parsing /init.trace.rc took 0.00s.)
+[    2.197486] init: (Parsing /init.rc took 0.00s.)
+[    2.197538] init: Starting service 'ueventd'...
+[    2.197649] init: write_file: Unable to open '/sys/module/xt_qtaguid/parameters/ctrl_write_limited': No such file or directory
+[    2.197672] init: Waiting for /dev/.coldboot_done...
+[    2.198104] ueventd: ueventd started!
+[    2.335332] pcnet32: pcnet32.c:v1.35 21.Apr.2008 tsbogend@alpha.franken.de
+[    2.335733] pcnet32: PCnet/FAST III 79C973 at 0xd020, 08:00:27:04:58:4e assigned IRQ 19
+[    2.335762] pcnet32: Found PHY 0022:561b at address 0
+[    2.335997] pcnet32: eth0: registered as PCnet/FAST III 79C973
+[    2.336042] pcnet32: 1 cards_found
+[    2.406637] clocksource: Switched to clocksource tsc
+[    3.040626] snd_intel8x0 0000:00:05.0: intel8x0_measure_ac97_clock: measured 121159 usecs (12288 samples)
+[    3.040630] snd_intel8x0 0000:00:05.0: measured clock 101420 rejected
+[    3.398819] snd_intel8x0 0000:00:05.0: intel8x0_measure_ac97_clock: measured 51900 usecs (11264 samples)
+[    3.398824] snd_intel8x0 0000:00:05.0: measured clock 217032 rejected
+[    3.751761] snd_intel8x0 0000:00:05.0: intel8x0_measure_ac97_clock: measured 50583 usecs (11264 samples)
+[    3.751766] snd_intel8x0 0000:00:05.0: measured clock 222683 rejected
+[    3.751769] snd_intel8x0 0000:00:05.0: clocking to 48000
+[    3.800078] random: nonblocking pool is initialized
+[    3.873481] piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+[    3.880675] AVX2 version of gcm_enc/dec engaged.
+[    3.880678] AES CTR mode by8 optimization enabled
+[    3.944616] ueventd: failed to load intel_powerclamp for modalias cpu:type:x86,ven0000fam0006mod003C:feature:,0000,0001,0002,0003,0004,0005,0006,0007,0008,0009,000B,000C,000D,000E,000F,0010,0011,0013,0017,0018,0019,001A,001C,002B,0034,003B,003D,0068,006F,0070,0072,0074,0075,0076,0078,0080,0081,0089,008D,0093,0094,0096,0097,0099,009A,009B,009C,009E,00C0,00C5,0125,012D
+
+[    3.974019] intel_rapl: no valid rapl domains found in package 0
+[    3.984680] ueventd: failed to load intel_rapl for modalias cpu:type:x86,ven0000fam0006mod003C:feature:,0000,0001,0002,0003,0004,0005,0006,0007,0008,0009,000B,000C,000D,000E,000F,0010,0011,0013,0017,0018,0019,001A,001C,002B,0034,003B,003D,0068,006F,0070,0072,0074,0075,0076,0078,0080,0081,0089,008D,0093,0094,0096,0097,0099,009A,009B,009C,009E,00C0,00C5,0125,012D
+
+[    4.003805] ueventd: failed to load intel_powerclamp for modalias cpu:type:x86,ven0000fam0006mod003C:feature:,0000,0001,0002,0003,0004,0005,0006,0007,0008,0009,000B,000C,000D,000E,000F,0010,0011,0013,0017,0018,0019,001A,001C,002B,0034,003B,003D,0068,006F,0070,0072,0074,0075,0076,0078,0080,0081,0089,008D,0093,0094,0096,0097,0099,009A,009B,009C,009E,00C0,00C5,0125,012D
+
+[    4.005230] intel_rapl: no valid rapl domains found in package 0
+[    4.015622] ueventd: failed to load intel_rapl for modalias cpu:type:x86,ven0000fam0006mod003C:feature:,0000,0001,0002,0003,0004,0005,0006,0007,0008,0009,000B,000C,000D,000E,000F,0010,0011,0013,0017,0018,0019,001A,001C,002B,0034,003B,003D,0068,006F,0070,0072,0074,0075,0076,0078,0080,0081,0089,008D,0093,0094,0096,0097,0099,009A,009B,009C,009E,00C0,00C5,0125,012D
+
+[    4.033642] ueventd: failed to load intel_powerclamp for modalias cpu:type:x86,ven0000fam0006mod003C:feature:,0000,0001,0002,0003,0004,0005,0006,0007,0008,0009,000B,000C,000D,000E,000F,0010,0011,0013,0017,0018,0019,001A,001C,002B,0034,003B,003D,0068,006F,0070,0072,0074,0075,0076,0078,0080,0081,0089,008D,0093,0094,0096,0097,0099,009A,009B,009C,009E,00C0,00C5,0125,012D
+
+[    4.034721] intel_rapl: no valid rapl domains found in package 0
+[    4.046656] ueventd: failed to load intel_rapl for modalias cpu:type:x86,ven0000fam0006mod003C:feature:,0000,0001,0002,0003,0004,0005,0006,0007,0008,0009,000B,000C,000D,000E,000F,0010,0011,0013,0017,0018,0019,001A,001C,002B,0034,003B,003D,0068,006F,0070,0072,0074,0075,0076,0078,0080,0081,0089,008D,0093,0094,0096,0097,0099,009A,009B,009C,009E,00C0,00C5,0125,012D
+
+[    4.065622] ueventd: failed to load intel_powerclamp for modalias cpu:type:x86,ven0000fam0006mod003C:feature:,0000,0001,0002,0003,0004,0005,0006,0007,0008,0009,000B,000C,000D,000E,000F,0010,0011,0013,0017,0018,0019,001A,001C,002B,0034,003B,003D,0068,006F,0070,0072,0074,0075,0076,0078,0080,0081,0089,008D,0093,0094,0096,0097,0099,009A,009B,009C,009E,00C0,00C5,0125,012D
+
+[    4.066721] intel_rapl: no valid rapl domains found in package 0
+[    4.079624] ueventd: failed to load intel_rapl for modalias cpu:type:x86,ven0000fam0006mod003C:feature:,0000,0001,0002,0003,0004,0005,0006,0007,0008,0009,000B,000C,000D,000E,000F,0010,0011,0013,0017,0018,0019,001A,001C,002B,0034,003B,003D,0068,006F,0070,0072,0074,0075,0076,0078,0080,0081,0089,008D,0093,0094,0096,0097,0099,009A,009B,009C,009E,00C0,00C5,0125,012D
+
+[    4.102646] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
+[    4.510848] ueventd: blacklisted module evbug: 1
+[    4.514749] ueventd: blacklisted module evbug: 1
+[    4.696772] input: PC Speaker as /devices/platform/pcspkr/input/input6
+[    4.698572] ueventd: blacklisted module evbug: 1
+[    4.700235] ueventd: blacklisted module evbug: 1
+[    4.754972] ueventd: failed to load pcc_cpufreq for modalias acpi:LNXCPU:
+[    4.767667] ueventd: failed to load pcc_cpufreq for modalias acpi:LNXCPU:
+[    4.780641] ueventd: failed to load pcc_cpufreq for modalias acpi:LNXCPU:
+[    4.794672] ueventd: failed to load pcc_cpufreq for modalias acpi:LNXCPU:
+[    4.894587] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+[    4.897579] ueventd: blacklisted module evbug: 1
+[    4.902936] ueventd: blacklisted module evbug: 1
+[    4.907208] power_supply BAT0: uevent
+[    4.907212] power_supply BAT0: POWER_SUPPLY_NAME=BAT0
+[    4.907313] power_supply BAT0: prop STATUS=Discharging
+[    4.907317] power_supply BAT0: prop PRESENT=1
+[    4.907320] power_supply BAT0: prop TECHNOLOGY=Unknown
+[    4.907322] power_supply BAT0: prop CYCLE_COUNT=0
+[    4.907325] power_supply BAT0: prop VOLTAGE_MIN_DESIGN=10000000
+[    4.907327] power_supply BAT0: prop VOLTAGE_NOW=10000000
+[    4.907330] power_supply BAT0: prop ENERGY_FULL_DESIGN=50000000
+[    4.907332] power_supply BAT0: prop ENERGY_FULL=50000000
+[    4.907334] power_supply BAT0: prop ENERGY_NOW=47500000
+[    4.907336] power_supply BAT0: prop CAPACITY=95
+[    4.907339] power_supply BAT0: prop CAPACITY_LEVEL=Normal
+[    4.907341] power_supply BAT0: prop MODEL_NAME=1
+[    4.907344] power_supply BAT0: prop MANUFACTURER=innotek
+[    4.907346] power_supply BAT0: prop SERIAL_NUMBER=0
+[    4.908644] power_supply AC: uevent
+[    4.908706] power_supply AC: POWER_SUPPLY_NAME=AC
+[    4.908749] power_supply AC: prop ONLINE=0
+[    4.917009] ueventd: blacklisted module evbug: 1
+[    4.920617] ueventd: blacklisted module evbug: 1
+[    4.921301] ueventd: Coldboot took 2.72s.
+[    4.925701] init: Waiting for /dev/.coldboot_done took 2.73s.
+[    4.925728] init: /dev/hw_random not found
+[    4.929352] init: write_file: Unable to open '/sys/class/misc/alarm/rtc_local_time': No such file or directory
+[    4.929810] init: write_file: Unable to open '/proc/sys/kernel/hung_task_timeout_secs': No such file or directory
+[    4.929817] init: write_file: Unable to open '/proc/cpu/alignment': No such file or directory
+[    4.929836] init: write_file: Unable to open '/proc/sys/kernel/sched_compat_yield': No such file or directory
+[    4.929957] init: write_file: Unable to write to '/dev/cpuctl/cpu.shares': Invalid argument
+[    4.930432] modprobe: /sbin/modprobe fs-cpuset
+[    4.941398] modprobe: Couldn't probe module 'fs-cpuset'
+[    4.941818] init: write_file: Unable to open '/proc/sys/abi/swp': No such file or directory
+[    4.941865] init: /dev/hw_random not found
+[    4.942143] fs_mgr: __mount(source=none,target=/cache,type=tmpfs)=0
+[    4.942282] init: Starting service 'logd'...
+[    4.942460] init: Starting service 'exec 0 (/system/bin/logwrapper)'...
+[    5.479005] logd.auditd: start
+[    5.479013] logd.klogd: 5303378902
+[    5.696901] Bluetooth: Core ver 2.21
+[    5.696940] NET: Registered protocol family 31
+[    5.696942] Bluetooth: HCI device and connection manager initialized
+[    5.696946] Bluetooth: HCI socket layer initialized
+[    5.696949] Bluetooth: L2CAP socket layer initialized
+[    5.696955] Bluetooth: SCO socket layer initialized
+[    5.701628] usbcore: registered new interface driver btusb
+[    5.757411] uvesafb: Oracle Corporation, Oracle VM VirtualBox VBE Adapter, Oracle VM VirtualBox Version 5.2.0, OEM: VirtualBox VESA BIOS, VBE v2.0
+[    5.800886] uvesafb: no monitor limits have been set, default refresh rate will be used
+[    5.801082] uvesafb: scrolling: redraw
+[    5.810460] Console: switching to colour frame buffer device 128x48
+[    5.813659] uvesafb: framebuffer at 0xe0000000, mapped to 0xffffc90000800000, using 6144k, total 6144k
+[    5.813793] fb0: VESA VGA frame buffer device
+[    5.883312] init: Service 'exec 0 (/system/bin/logwrapper)' (pid 1027) exited with status 0
+[    5.883735] init: property_set("ro.product.model", "Generic Android-x86_64") failed
+[    5.883867] init: property_set("ro.product.manufacturer", "unknown") failed
+[    5.884325] init: (Loading properties from /system/build.prop took 0.00s.)
+[    5.884344] init: Unable to read property file '/vendor/build.prop'
+[    5.884352] init: Unable to read property file '/factory/factory.prop'
+[    5.884392] init: /recovery not specified in fstab
+[    5.884456] init: Starting service 'vold'...
+[    5.884596] init: Not bootcharting.
+[    5.884891] init: Failed to reload policy
+[    5.884926] init: Starting service 'exec 1 (/system/bin/tzdatacheck)'...
+[    5.888485] init: Service 'exec 1 (/system/bin/tzdatacheck)' (pid 1068) exited with status 0
+[    5.888571] init: Unable to read property file '/data/local.prop'
+[    5.888587] init: Starting service 'logd-reinit'...
+[    5.888869] init: write_file: Unable to open '/proc/sys/vm/min_free_order_shift': No such file or directory
+[    5.889101] init: Starting service 'healthd'...
+[    5.889175] init: Starting service 'lmkd'...
+[    5.889253] init: Starting service 'servicemanager'...
+[    5.889326] init: Starting service 'surfaceflinger'...
+[    5.889528] binder: 1070:1070 transaction failed 29189, size 0-0
+[    5.889838] init: Starting service 'console'...
+[    5.889938] init: Starting service 'netd'...
+[    5.890010] init: Starting service 'debuggerd'...
+[    5.890067] init: Starting service 'debuggerd64'...
+[    5.890129] init: Starting service 'ril-daemon'...
+[    5.890206] init: Starting service 'drm'...
+[    5.890265] init: Starting service 'media'...
+[    5.890323] init: Starting service 'installd'...
+[    5.890380] init: cannot find '/system/bin/install-recovery.sh', disabling 'flash_recovery'
+[    5.890388] init: Starting service 'keystore'...
+[    5.890452] init: Starting service 'zygote'...
+[    5.890509] init: Starting service 'zygote_secondary'...
+[    5.890574] init: Starting service 'gatekeeperd'...
+[    5.890635] init: Starting service 'perfprofd'...
+[    5.890789] init: Starting service 'powerbtnd'...
+[    5.895401] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[    5.895410] init: write_file: Unable to open '/sys/class/android_usb/android0/idVendor': No such file or directory
+[    5.895416] init: write_file: Unable to open '/sys/class/android_usb/android0/idProduct': No such file or directory
+[    5.895422] init: write_file: Unable to open '/sys/class/android_usb/android0/functions': No such file or directory
+[    5.895428] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[    5.895438] init: Starting service 'adbd'...
+[    5.895473] logd.daemon: reinit
+[    5.895722] init: Service 'logd-reinit' (pid 1069) exited with status 0
+[    6.120429] input: Android Power Button as /devices/virtual/input/input7
+[    6.121814] ueventd: blacklisted module evbug: 1
+[    6.890096] healthd: BatteryHealthPath not found
+[    6.890102] healthd: BatteryTemperaturePath not found
+[    7.656431] x_tables: ip_tables: owner match: used from hooks INPUT, but only valid from OUTPUT/POSTROUTING
+[    7.658802] x_tables: ip6_tables: owner match: used from hooks INPUT, but only valid from OUTPUT/POSTROUTING
+[    7.753417] modprobe: /sbin/modprobe netdev-dummy0
+[    7.766270] modprobe: Couldn't probe module 'netdev-dummy0'
+[    7.766810] modprobe: /sbin/modprobe dummy0
+[    7.772938] modprobe: Couldn't probe module 'dummy0'
+[    9.943883] init: Starting service 'bootanim'...
+[   14.134161] capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+[   29.113742] healthd: battery l=95 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 15:05:28.978739553 UTC
+[   29.393131] lowmemorykiller: lowmem_shrink: convert oom_adj to oom_score_adj:
+[   29.393136] lowmemorykiller: oom_adj 0 => oom_score_adj 0
+[   29.393138] lowmemorykiller: oom_adj 1 => oom_score_adj 58
+[   29.393139] lowmemorykiller: oom_adj 2 => oom_score_adj 117
+[   29.393141] lowmemorykiller: oom_adj 3 => oom_score_adj 176
+[   29.393142] lowmemorykiller: oom_adj 9 => oom_score_adj 529
+[   29.393144] lowmemorykiller: oom_adj 15 => oom_score_adj 1000
+[   41.403121] pcnet32 0000:00:03.0 eth0: link up, 100Mbps, full-duplex
+[   41.404762] init: Starting service 'dhcpcd_eth0'...
+[   41.633822] init: Starting service 'exec 2 (/system/bin/logwrapper)'...
+[   41.647544] init: Service 'exec 2 (/system/bin/logwrapper)' (pid 1538) exited with status 0
+[   53.199876] init: Service 'bootanim' (pid 1362) exited with status 0
+[   53.340219] init: Starting service 'exec 3 (/system/bin/logwrapper)'...
+[   53.865551] init: Service 'exec 3 (/system/bin/logwrapper)' (pid 2467) exited with status 0
+[   53.865584] init: Starting service 'su_daemon'...
+[   54.253841] init: Starting service 'bluetoothd'...
+[   54.253942] init: Starting service 'exec 4 (/system/bin/logwrapper)'...
+[   54.380228] init: Service 'exec 4 (/system/bin/logwrapper)' (pid 2565) exited with status 0
+[   60.187145] init: Service 'bluetoothd' (pid 2564) exited with status 0
+[   60.187275] init: Starting service 'exec 5 (/system/bin/logwrapper)'...
+[   60.272980] init: Service 'exec 5 (/system/bin/logwrapper)' (pid 2997) exited with status 0
+[   61.780202] binder: undelivered transaction 72359
+[  102.587653] healthd: battery l=93 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:36:43.981327517 UTC
+[  162.630499] healthd: battery l=91 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:37:44.019533678 UTC
+[  222.648330] healthd: battery l=90 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:38:44.032671851 UTC
+[  254.193502] binder: 3603:3611 refcount change on invalid ref 54
+[  282.713285] healthd: battery l=89 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:39:44.093025800 UTC
+[  291.424411] binder: 1393:1416 transaction failed 29189, size 240-0
+[  294.447427] binder: 4583:4591 refcount change on invalid ref 5
+[  342.778330] healthd: battery l=89 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:40:44.153413307 UTC
+[  346.560115] binder: 3180:3188 refcount change on invalid ref 44
+[  346.588876] binder: 3180:4910 refcount change on invalid ref 44
+[  346.588887] binder: 3180:4910 refcount change on invalid ref 44
+[  346.588905] binder: transaction release 266289 bad handle 44
+[  346.650462] binder: 3180:3188 refcount change on invalid ref 72
+[  346.662675] binder: 3180:4910 refcount change on invalid ref 72
+[  346.662681] binder: 3180:4910 refcount change on invalid ref 72
+[  346.662685] binder: transaction release 266604 bad handle 72
+[  346.752516] binder: 3180:3188 refcount change on invalid ref 86
+[  346.757652] binder: 3180:4910 refcount change on invalid ref 86
+[  346.757658] binder: 3180:4910 refcount change on invalid ref 86
+[  346.757662] binder: transaction release 267024 bad handle 86
+[  399.075707] binder: 1393:1454 transaction failed 29189, size 328-0
+[  402.783712] healthd: battery l=88 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:41:44.154160318 UTC
+[  420.305923] binder: 1393:1454 transaction failed 29189, size 328-0
+[  462.826045] healthd: battery l=86 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:42:44.191841565 UTC
+[  522.861813] healthd: battery l=85 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:43:44.222969167 UTC
+[  582.926808] healthd: battery l=85 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:44:44.283316490 UTC
+[  629.160658] healthd: battery l=84 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:45:30.513585727 UTC
+[  689.226704] healthd: battery l=83 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:46:30.574985514 UTC
+[  749.291646] healthd: battery l=82 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:47:30.635279484 UTC
+[  809.349450] healthd: battery l=80 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:48:30.688388699 UTC
+[  869.414583] healthd: battery l=80 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:49:30.748919818 UTC
+[  929.479502] healthd: battery l=78 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:50:30.809189674 UTC
+[  989.544469] healthd: battery l=77 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:51:30.869507778 UTC
+[ 1049.609512] healthd: battery l=70 v=10000 t=0.0 h=1 st=3 chg= 2017-11-07 11:52:30.929902556 UTC
+[ 1109.674813] healthd: battery l=72 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 11:53:30.990515088 UTC
+[ 1169.679929] healthd: battery l=73 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 11:54:30.991025776 UTC
+[ 1229.684540] healthd: battery l=74 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 11:55:30.990996236 UTC
+[ 1289.690484] healthd: battery l=75 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 11:56:30.992294575 UTC
+[ 1349.693825] healthd: battery l=76 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 11:57:30.990992720 UTC
+[ 1409.698468] healthd: battery l=77 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 11:58:30.990992648 UTC
+[ 1469.703250] healthd: battery l=78 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 11:59:30.990944818 UTC
+[ 1529.708689] healthd: battery l=79 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 12:00:30.991924253 UTC
+[ 1589.712490] healthd: battery l=80 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 12:01:30.991070290 UTC
+[ 1649.717039] healthd: battery l=81 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 12:02:30.990987927 UTC
+[ 1709.721725] healthd: battery l=82 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 12:03:30.991029813 UTC
+[ 1769.726346] healthd: battery l=83 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 12:04:30.991007508 UTC
+[ 1829.731004] healthd: battery l=85 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 12:05:30.991022369 UTC
+[ 1889.735657] healthd: battery l=86 v=10000 t=0.0 h=1 st=2 chg=a 2017-11-07 12:06:30.991031271 UTC
