@@ -1,0 +1,1 @@
+cmd_/home/os/PROG/fuckyou/os_prog/Phase2/helloOS.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/os/PROG/fuckyou/os_prog/Phase2/helloOS.ko /home/os/PROG/fuckyou/os_prog/Phase2/helloOS.o /home/os/PROG/fuckyou/os_prog/Phase2/helloOS.mod.o
